@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#252b43">
+  <meta name="description" content="Un pequeño universo preparado para Doris.">
+  <title>Para Doris ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__grain"></div>
+    <div class="ambient__glow ambient__glow--one"></div>
+    <div class="ambient__glow ambient__glow--two"></div>
+  </div>
+
+  <main id="experience">
+    <section class="scene scene--cover is-active" data-scene="0" aria-label="Bienvenida">
+      <div class="cover-art" aria-hidden="true">
+        <div class="cover-stars"></div>
+      </div>
+      <div class="cover-content">
+        <p class="eyebrow reveal">14 DE NOVIEMBRE <span>✦</span> UN DÍA PARA CELEBRARTE</p>
+        <p class="cover-kicker reveal">Hay lugares que se sienten como un abrazo…</p>
+        <h1 class="cover-name reveal" id="cover-name">Doris</h1>
+        <p class="cover-message reveal" id="cover-message">Hoy quiero regalarte un pequeño lugar hecho con cariño, recuerdos y todo aquello que merece quedarse.</p>
+        <button class="primary-button reveal" data-next>Ven, quiero mostrarte algo <span>↗</span></button>
+        <p class="cover-foot reveal">UNA PEQUEÑA HISTORIA HECHA PARA TI</p>
+      </div>
+      <div class="cover-bottom-note">DESLIZA CON EL CORAZÓN <span>✦</span></div>
+    </section>
+
+    <section class="scene scene--memories" data-scene="1" aria-label="Nuestros recuerdos">
+      <div class="scene-shell memories-shell">
+        <header class="section-heading">
+          <p class="eyebrow">CAPÍTULO I <span>✦</span> LO QUE GUARDAMOS</p>
+          <h2>Hay momentos que<br><em>merecen quedarse.</em></h2>
+          <p class="section-intro" id="memories-intro">Pequeños instantes que, sin hacer ruido, encontraron un lugar especial en nuestra memoria.</p>
+        </header>
+        <div class="memory-story" id="memory-gallery"></div>
+        <div class="scene-footer"><span>Y CADA RECUERDO TIENE SU LUZ</span><span>✦</span></div>
+        <nav class="scene-nav"><button class="text-button" data-prev>← Volver</button><span class="page-count">02 <i>/</i> 06</span><button class="text-button" data-next>Continuar →</button></nav>
+      </div>
+    </section>
+
+    <section class="scene scene--music" data-scene="2" aria-label="Nuestra música">
+      <div class="scene-shell">
+        <header class="section-heading">
+          <p class="eyebrow">CAPÍTULO II <span>✦</span> NUESTRA BANDA SONORA</p>
+          <h2>Hay canciones que<br><em>también recuerdan.</em></h2>
+          <p class="section-intro">Algunas nos acompañaron en días luminosos. Otras estuvieron ahí cuando el camino no fue tan sencillo.</p>
+        </header>
+        <div class="playlist-tabs" role="tablist" aria-label="Listas de reproducción">
+          <button class="playlist-tab is-selected" data-playlist="good" role="tab" aria-selected="true">☀ En los buenos momentos</button>
+          <button class="playlist-tab" data-playlist="hard" role="tab" aria-selected="false">☾ Y en los malos</button>
+        </div>
+        <div class="music-layout">
+          <div class="album-art" id="album-art"><div class="album-orbit"></div><span class="album-symbol">♫</span><small>UNA CANCIÓN, UN RECUERDO</small></div>
+          <div class="player-panel">
+            <p class="eyebrow" id="playlist-label">PLAYLIST 01 · LUZ</p>
+            <h3 id="track-title">Elige una canción</h3>
+            <p class="track-artist" id="track-artist">Tu música aparecerá aquí</p>
+            <div class="track-list" id="track-list"></div>
+            <div class="player-controls">
+              <div class="control-row">
+                <button class="icon-button" id="prev-track" aria-label="Canción anterior">↶</button>
+                <button class="play-button" id="play-track" aria-label="Reproducir">▶</button>
+                <button class="icon-button" id="next-track" aria-label="Canción siguiente">↷</button>
+              </div>
+              <div class="progress-wrap"><span id="current-time">0:00</span><input id="progress" type="range" min="0" max="100" value="0" aria-label="Progreso de la canción"><span id="duration">0:00</span></div>
+              <div class="volume-row"><span>VOLUMEN</span><input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volumen"></div>
+            </div>
+            <p class="player-hint">La música comienza cuando tú eliges darle play.</p>
+          </div>
+        </div>
+        <audio id="audio-player" preload="metadata"></audio>
+        <nav class="scene-nav"><button class="text-button" data-prev>← Volver</button><span class="page-count">03 <i>/</i> 06</span><button class="text-button" data-next>Continuar →</button></nav>
+      </div>
+    </section>
+
+    <section class="scene scene--her" data-scene="3" aria-label="Ella, simplemente ella">
+      <div class="scene-shell her-shell">
+        <div class="her-orb" aria-hidden="true"><span>✧</span></div>
+        <header class="section-heading">
+          <p class="eyebrow">CAPÍTULO III <span>✦</span> Mi angel que irradia paz</p>
+          <h2>Tú,<br><em>simplemente tú.</em></h2>
+          <p class="section-intro" id="her-intro">Hay cosas que no necesitan grandes explicaciones. A veces, basta con mirar a alguien y entender lo especial que es.</p>
+        </header>
+        <div class="her-columns">
+          <article class="her-note"><span class="note-number">01</span><h3>Lo que admiro de ti</h3><p id="admiration-text">[Aquí escribiré aquello que admiro de ti, con mis propias palabras.]</p></article>
+          <article class="her-note her-note--accent"><span class="note-number">02</span><h3>Tu manera de amar</h3><p id="love-text">[Aquí escribiré sobre la ternura, el cuidado y el amor que llevas dentro.]</p></article>
+        </div>
+        <p class="her-quote" id="her-quote">“Hay personas cuya presencia hace que el mundo se sienta un poquito más tranquilo.”</p>
+        <nav class="scene-nav"><button class="text-button" data-prev>← Volver</button><span class="page-count">04 <i>/</i> 06</span><button class="text-button" data-next>Continuar →</button></nav>
+      </div>
+    </section>
+
+    <section class="scene scene--letter" data-scene="4" aria-label="Una carta para ti">
+      <div class="scene-shell letter-shell">
+        <header class="section-heading">
+          <p class="eyebrow">CAPÍTULO IV <span>✦</span> CON TODO MI CARIÑO</p>
+          <h2>Unas palabras<br><em>para guardar.</em></h2>
+          <p class="section-intro">Una pequeña carta.</p>
+        </header>
+        <article class="letter-paper">
+          <div class="letter-top">PARA DORIS <span>✿</span></div>
+          <p class="letter-salutation" id="letter-greeting">Mi Doris,</p>
+          <div class="letter-body" id="letter-body">[Aquí irá tu carta. Escríbela en contenido.js y aparecerá en este espacio.]</div>
+          <p class="letter-signoff" id="letter-signoff">Con cariño, siempre.</p>
+          <div class="letter-flower">✿</div>
+        </article>
+        <nav class="scene-nav"><button class="text-button" data-prev>← Volver</button><span class="page-count">05 <i>/</i> 06</span><button class="text-button" data-next>Continuar →</button></nav>
+      </div>
+    </section>
+
+    <section class="scene scene--final" data-scene="5" aria-label="Mensaje final">
+      <div class="final-sky" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>·</span><span>✧</span></div>
+      <div class="final-content">
+        <p class="eyebrow">UN ÚLTIMO MOMENTO <span>✦</span></p>
+        <div class="final-flower">✿</div>
+        <h2 id="final-title">Que la vida<br>te siga <em>sorprendiendo.</em></h2>
+        <p class="final-message" id="final-message">Deseo que este nuevo año te encuentre rodeada de amor, motivos para sonreír y sueños que poco a poco se hagan realidad.</p>
+        <p class="final-signature" id="final-signature">Feliz cumpleaños, Doris.</p>
+        <div class="final-rule"></div>
+        <p class="final-small">HECHO CON MUCHO CARIÑO, PARA TI.</p>
+        <button class="text-button restart-button" id="restart">Volver a vivirlo ↺</button>
+      </div>
+      <nav class="scene-nav"><button class="text-button" data-prev>← Volver</button><span class="page-count">06 <i>/</i> 06</span><span class="nav-spacer"></span></nav>
+    </section>
+  </main>
+
+  <div class="global-progress" aria-hidden="true"><span id="global-progress-fill"></span></div>
+  <script src="js/contenido.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
